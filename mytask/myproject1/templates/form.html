@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1> Registration form</h1>
+<form action="" method="post">
+    {% csrf_token %}
+  <input type="text" name="name" placeholder="Enter Name"><br>
+        <input type="date" name="date" placeholder="Enter dob"><br>
+<input type="email" name="email" placeholder="Enter email id"><br>
+<input type="number" name="number" placeholder="Enter phn no">
+
+    <p>Gender</p>
+      <input type="radio" id="html" name="gender" value="Male">
+  <label for="gender">Male</label><br>
+  <input type="radio" id="css" name="gender" value="Female">
+  <label for="gender">Female</label><br><br>
+ <textarea rows = "5" cols = "50" name = "Address">
+            Enter your address
+         </textarea><br><br>
+    Choose districts
+       <select name = "District">
+            <optgroup label="Ernakulam">
+            <option value = "Aluva" selected>Aluva</option>
+            <option value = "Kochi">Kochi</option>
+             <option value = "Paravur">Paravur</option>
+            </optgroup>
+           <optgroup label="Kannur">
+            <option value = "iritti" selected>Iritti</option>
+            <option value = "Kannur">Kannur</option>
+             <option value = "Payyannur">Payyannur</option>
+       </optgroup>
+            <optgroup label="Wayanad">
+            <option value = "Kalpetta" selected>Kalpetta</option>
+            <option value = "Vythiri">vythiri</option>
+
+       </optgroup>
+         </select><br><br>
+
+      Acc Type
+       <select name = "Acc Type">
+
+            <option value = "savings " selected>Savings</option>
+            <option value = "current ">Current</option>
+           <option value = "salary ">Salary</option>
+
+         </select><br><br>
+Materials Provided<br>
+      <input type="checkbox" id="provided" name="provided" value="debit">
+  <label for="debit"> debit</label><br>
+  <input type="checkbox" id="provided1" name="provided" value="Credit">
+  <label for="credit"> credit</label><br>
+  <input type="checkbox" id="provided2" name="provided" value="Cheque">
+  <label for="cheque"> cheque</label><br><br>
+
+
+<button onclick="myFunction()">Submit</button>
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+  document.getElementById("demo").innerHTML = "Application accepted";
+}
+</script>
+    <input type="submit" value="Logout">
+<!--<input type="button" value="Return to Home Page"></a>-->
+       <button type="button">
+    <a href="index">Return to home pg</a>
+</button><br>
+</form>
+</body>
+</html>
